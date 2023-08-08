@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 
-def uppercase(str):
-    ans = ""
-    for c in str:
-        if ord(c) >= 97 and ord(c) <= 122:
-            ans += chr(ord(c) - 32)
-        else:
-            ans += c
-            print(result)
+uppercase = __import__('8-uppercase').uppercase
+
+uppercase("best")
+uppercase("Best School 98 Battery street")
