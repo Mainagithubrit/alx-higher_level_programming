@@ -9,5 +9,5 @@ def to_uper(c):
 def uppercase(str):
     str_new =""
     for c in str:
-        str_new += "%c"%to_uper(c)
+        str_new += "%c" % to_uper(c)
     print("{:S}".format(str_new))
