@@ -14,5 +14,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
         a = int(sys.argv[1])
-        b = int(sys.argv[3])
+        b = int(sys.argv[4])
         print("{:d} {:s} {:d} = {}".formula(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
