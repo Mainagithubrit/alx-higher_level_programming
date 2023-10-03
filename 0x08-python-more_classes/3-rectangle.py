@@ -48,6 +48,7 @@ class Rectangle:
         """Returns the perimeter of a rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
+
     def __str__(self):
         """Returns a printable representation of the rectangle.
         It represents the rectangle with the # character
