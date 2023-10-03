@@ -1,22 +1,21 @@
 #!/usr/bin/python3
+"""
+This is the "Rectangle"  module.
 
-"""a class that defines a rectangle """
+This module provides a simple Rectangle class.
+"""
+
 
 class Rectangle:
-    """A represented rectangle"""
-
+    """A Rectangle class with attributes width and height, and
+    methods area, perimeter, print, and str.
+    """
     def __init__(self, width=0, height=0):
-        """Initializing the rectangle.
-        Args:
-            width (int): width of the rectangle.
-            height (int): height of the rectangle.
-        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the width of the rectangle"""
         return self.__width
 
     @width.setter
@@ -29,7 +28,6 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the rectangle"""
         return self.__height
 
     @height.setter
@@ -40,25 +38,20 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    def __str__(self):
+        total = ""
+        if self.__height == 0 or self.width == 0:
+            return total
+        for i in range(self.__height):
+            total += ("#" * self.__width)
+            if i is not self.__height - 1:
+                total += "\n"
+        return total
+
     def area(self):
-        """Returns the area of a rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the perimeter of a rectangle"""
-        if self.__width == 0 or self.__height == 0:
+        if self.__width is 0 or self.__height is 0:
             return 0
-
-    def __str__(self):
-        """Returns a printable representation of the rectangle.
-        It represents the rectangle with the # character
-        """
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+        return (2 * self.__width) + (2 * self.__height)
