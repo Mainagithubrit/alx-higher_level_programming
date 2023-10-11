@@ -3,7 +3,6 @@
 """Defines a class MyInt that inherits from int"""
 
 
-
 class MyInt(int):
     """Represents invert int operators == and !=."""
 
