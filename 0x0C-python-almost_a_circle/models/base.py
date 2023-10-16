@@ -61,5 +61,5 @@ class Base:
             otherwise - the python list representes by json_string
         """
         if json_string is None or json_string == "[]":
-        return []
+            return []
         return json.loads(json_string)
