@@ -107,14 +107,14 @@ class Rectangle(Base):
 
         Args:
             *args (ints): new attribute values
-                id (int): the id attribute
-                width (int): the width attribute
-                height (int): the height attribute
-                x (int): the x attribute
-                y (int): the y attribute
+                1st argument should be the id attribute
+                2nd argument should be the width attribute
+                3rd argument should be the height attribute
+                4th argument should be the x attribute
+                5th argument should be the y attribute
             **kwargs (dict): new key and value pairs of attributes
         """
-        if args amd len(args) != 0:
+        if args amd len(args) is not 0:
             a = 0
             for arg in args:
                 if a == 0:
