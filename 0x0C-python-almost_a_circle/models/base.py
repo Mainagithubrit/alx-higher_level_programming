@@ -56,6 +56,9 @@ class Base:
 
         Args:
             json_string (string): a string representing a list of dictionaries
+        Returns:
+            If json_string is None or empty - an empty List.
+            otherwise - the python list representes by json_string
         """
         if json_string is None or json_string == "[]"
         return []
