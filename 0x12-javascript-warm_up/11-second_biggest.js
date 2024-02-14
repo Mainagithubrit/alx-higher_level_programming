@@ -1,9 +1,10 @@
 #!/usr/bin/node
 // a script that searches the second biggest integer in the list of arguments.
 
-if (process.argv.length <= 3) {
+const list = process.argv.slice(2);
+if (list.length === 0 || list.length === 1) {
   console.log(0);
 } else {
-  const list = process.argv.sort();
-  console.log(list.reverse()[1]);
+  list.sort((a, b) => a - b);
+  console.log(list[list.length - 2]);
 }
