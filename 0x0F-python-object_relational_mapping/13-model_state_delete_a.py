@@ -16,4 +16,4 @@ if __name__ == "__main__":
     session = Sesssion()
     for instance in session.query(State).fiter(State.name.like('%a%')):
         session.delete(instance)
-        session.commit()
+    session.commit()
